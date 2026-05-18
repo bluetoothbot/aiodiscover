@@ -39,7 +39,7 @@ _LOGGER = logging.getLogger(__name__)
 # segment — so any non-conforming label is dropped rather than propagated to
 # downstream consumers (e.g. Home Assistant's dhcp integration).
 _VALID_HOSTNAME_LABEL = re.compile(
-    r"^(?=.{1,63}$)[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?$"
+    r"\A(?=.{1,63}\Z)[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?\Z"
 )
 
 
